@@ -305,8 +305,7 @@ main {
   color: var(--clr-red-dark);
 }
 
-/*  */
-
+/* show, hide toggle */
 .show-btn {
   background: var(--clr-primary-8);
   border-color: transparent;
