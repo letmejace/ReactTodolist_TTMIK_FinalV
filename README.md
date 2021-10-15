@@ -1,3 +1,6 @@
+## Preview 
+![todo](https://user-images.githubusercontent.com/65179725/137449361-59dc29d3-4616-4c68-b54b-d96ce60be06d.PNG)
+
 ## 리액트를 이용해서 todo-list 앱 구현
 
 ### 기본 기능
