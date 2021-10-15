@@ -8,7 +8,7 @@ const List = ({ items, removeItem, editItem }) => {
       {items.map((item) => {
         const { id, title } = item;
         return (
-          <article className="grocery-item" key={id}>
+          <article className="todo-item" key={id}>
             <p className="title">{title}</p>
             <div className="btn-container">
               <button
