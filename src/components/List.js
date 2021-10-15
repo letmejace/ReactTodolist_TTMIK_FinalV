@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
+// props전달
 const List = ({ items, removeItem, editItem }) => {
   return (
     <div className="grocery-list">
@@ -15,6 +16,7 @@ const List = ({ items, removeItem, editItem }) => {
                 className="edit-btn"
                 onClick={() => editItem(id)}
               >
+                {/* react-icons install 후 사용 */}
                 <FaEdit />
               </button>
               <button

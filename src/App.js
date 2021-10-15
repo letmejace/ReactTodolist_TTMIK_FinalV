@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import List from "./components/List";
 import Alert from "./components/Alert";
 
-// localStorage에 저장
+// localStorage에 저장 (새로고침해도 목록 유지되도록)
 const getLocalStorage = () => {
   let list = localStorage.getItem("list");
   if (list) {
@@ -76,10 +76,11 @@ function App() {
     setName(specificItem.title);
   };
 
-  // localStorage 저장
+  //localStorage
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(list));
   }, [list]);
+
   return (
     <section className="section-center">
       {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
@@ -91,12 +92,12 @@ function App() {
         Hide
       </button>
 
-      <form className="grocery-form" onSubmit={handleSubmit}>
+      <form className="todo-form" onSubmit={handleSubmit}>
         <h3>Todo List</h3>
         <div className="form-control">
           <input
             type="text"
-            className="grocery"
+            className="todo"
             placeholder="Add Todo"
             value={name}
             onChange={(e) => setName(e.target.value)}
